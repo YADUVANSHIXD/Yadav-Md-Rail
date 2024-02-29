@@ -18,7 +18,7 @@ global.timezone= process.env.TZ || process.env.TIME_ZONE || "Asia/Kolkata";
 global.github=process.env.GITHUB|| "https://github.com/YADUVANSHIXD/Yadav-md";
 global.gurl  =process.env.GURL  || "https://chat.whatsapp.com/ID4DgDwwlHUEau8nYrdoli";
 global.website=process.env.GURL || "https://whatsapp.com/channel/0029VaA8jB4Id7nVPUH5qP2A" ; 
-global.THUMB_IMAGE = process.env.THUMB_IMAGE || process.env.IMAGE || "https://te.legra.ph/file/2348e3fc8167416110e96.jpg" ; // SET LOGO FOR IMAGE 
+global.THUMB_IMAGE = process.env.THUMB_IMAGE || process.env.IMAGE || "https://te.legra.ph/file/b5c1a99d83c0ddc3edae4.jpg" ; // SET LOGO FOR IMAGE 
 
 
 
@@ -59,16 +59,16 @@ global.scan = "https://suhail-md-vtsf.onrender.com/";
 
 module.exports = {
 
-  menu: process.env.MENU || "", /**  Available @MENU @Schemes 1: Aztec_Md, 2: A17_Md, 3: Suhail-Md Default ---------- If Not Choose then it Randomely Pic One Of Them Each time **/
+  menu: process.env.MENU || "", /**  Available @MENU @Schemes 1: Yadav_Md, 2: ʏᴀᴅᴜᴠᴀɴsʜɪ-ᴍᴅ, 3: ʏᴀᴅᴀᴠ-ᴍᴅ Default ---------- If Not Choose then it Randomely Pic One Of Them Each time **/
 
   HANDLERS: process.env.PREFIX  || ".",
   BRANCH  : process.env.BRANCH  || "main",
-  VERSION : process.env.VERSION || "V.1.2.8",
-  caption : process.env.CAPTION || "©YADAV-ᴍᴅ" , // ```『 ᴘᴏᴡᴇʀᴇᴅ ʙʏ sᴜʜᴀɪʟ²²¹-ᴍᴅ 』```", //*『sᴜʙsᴄʀɪʙᴇ • sᴜʜᴀɪʟ ᴛᴇᴄʜ』*\n youtube.com/@suhailtechinfo0"),
+  VERSION : process.env.VERSION || "V.1.1.1",
+  caption : process.env.CAPTION || "©ʏᴀᴅᴀᴠ-ᴍᴅ" , // ```『 ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʏᴀᴅᴀᴠ☠︎︎-ᴍᴅ 』```", //*『sᴜʙsᴄʀɪʙᴇ • ʏᴀᴅᴜᴠᴀɴsʜɪ-ᴛᴇᴄʜ』*\n youtube.com/@YADUVANSHI8318"),
  
-  author : process.env.PACK_AUTHER|| "Yadav-MD",
+  author : process.env.PACK_AUTHER|| "YADUVANSHI PRADEEP",
   packname: process.env.PACK_NAME || "♥️",
-  botname : process.env.BOT_NAME  || "YADAV-ᴍᴅ",
+  botname : process.env.BOT_NAME  || "ʏᴀᴅᴀᴠ-ᴍᴅ",
   ownername:process.env.OWNER_NAME|| "It'x Yaduvanshi",
 
   sessionName:process.env.SESSION_ID || "",  // PUT SESSION ID HERE 
@@ -85,7 +85,7 @@ module.exports = {
   aitts_Voice_Id : process.env.AITTS_ID || "37",
   ELEVENLAB_API_KEY: process.env.ELEVENLAB_API_KEY || "",
   WORKTYPE: process.env.WORKTYPE||process.env.MODE || "private",
-  LANG: process.env.THEME ? process.env.THEME.toUpperCase() : "YADAV",
+  LANG: process.env.THEME ? process.env.THEME.toUpperCase() : "ʏᴀᴅᴜᴠᴀɴsʜɪ",
 
 
 
@@ -123,7 +123,7 @@ let file = require.resolve(__filename)
 fs.watchFile(file, () => { fs.unwatchFile(file);console.log(`Update'${__filename}'`);delete require.cache[file];	require(file); })
  
 
-// ========================= [ Disables in V.1.2.8 ] ===============================\\  
+// ========================= [ Disables in V.1.1.1 ] ===============================\\  
   //style : process.env.STYLE || "2",  // put '1' & "2" here to check bot styles
   //readmessage:process.env.READ_MESSAGE|| "false",
   //warncount: process.env.WARN_COUNT || 3,
