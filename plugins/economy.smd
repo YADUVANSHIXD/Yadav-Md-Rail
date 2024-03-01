@@ -16,21 +16,20 @@
 //                                                                                                      //
 //══════════════════════════════════════════════════════════════════════════════════════════════════════//
 *
-   * @project_name : Suhail-Md
-   * @author : Suhail Tech Info
-   * @youtube : https://www.youtube.com/@SuhailTechInfo
-   * @description : Suhail-Md ,A Multi-functional whatsapp user bot.
-   * @version 1.2.8
+   * @project_name : Yadav-Md
+   * @author : Yaduvanshi pradeep
+   * @youtube : https://www.youtube.com/@yaduvanshi8318
+   * @description : yadav-Md ,A Multi-functional whatsapp user bot.
+   * @version 1.1.1
 *
 * 
-   * Created By Suhail Tech Info.
-   * © 2024 Suhail-Md.
+   * Created By Mr. pradeep yadav.
+   * © 2024 Yadav-Md.
 */
 
 
 
-let Suhail_Md = "Suhail MD Whatsapp bot md"
-
+let Yadav-Md = "Yadav MD Whatsapp bot md"
  
 
 
@@ -42,7 +41,7 @@ let ty = false ;
 
   try {
     if(isMongodb){ ty =  eco.connect(mongodb);console.log("Connected with discord economy!!") }
-   // else{ try{ ty = eco.connect("mongodb+srv://suhail:md@cluster0.ybz60ak.mongodb.net/?retryWrites=true&w=majority") ; console.log("Connected with discord economy!!") }catch(e){console.log("eco Mongose error : " , e)} }
+   // else{ try{ ty = eco.connect("mongodb+srv://Pradeepwabot:Pradeepwabot@pradeep.c30z6eu.mongodb.net/?retryWrites=true&w=majority") ; console.log("Connected with discord economy!!") }catch(e){console.log("eco Mongose error : " , e)} }
        
        
    } catch(e) { ty = false  }
@@ -146,8 +145,8 @@ async(message,match) => {
        case '1000':
        case '1':
        if (k > balance.wallet ) return message.reply(`*_You need to pay 🪙100 to increase bank capacity ~ 1000 sp_*`);
-         const deduct1 = await eco.deduct(user, "Suhail", 100);
-         const add1 = eco.giveCapacity(user,"Suhail", 1000);
+         const deduct1 = await eco.deduct(user, "Pradeep", 100);
+         const add1 = eco.giveCapacity(user,"Pradeep", 1000);
          return await message.reply(`*1000 🪙diamond storage has been added in ${message.senderName} bank*`)
 
 
@@ -155,8 +154,8 @@ async(message,match) => {
        case '100000':
        case '2':
        if (k < balance.wallet) return message.reply(`*You need to pay 🪙1000 to increase bank capacity ~ 100000 sp*`);
-         const deduct2 = await eco.deduct(user,"Suhail", 1000);
-         const add2 = eco.giveCapacity(user, "Suhail", 100000);
+         const deduct2 = await eco.deduct(user,"Pradeep", 1000);
+         const add2 = eco.giveCapacity(user, "Pradeep", 100000);
          return await message.reply(`*100000 🪙diamond storage has been added in ${message.pushName} bank*`)
 
 
@@ -165,8 +164,8 @@ async(message,match) => {
        case '10000000':
        case '3':
        if (k < balance.wallet) return message.reply(`You need to pay 🪙10000 to increase bank capacity ~ 1000 sp`);
-          const deduct3 = await eco.deduct(user, "Suhail", 10000);
-          const add3 = eco.giveCapacity(user, "Suhail", 10000000);
+          const deduct3 = await eco.deduct(user, "Pradeep", 10000);
+          const add3 = eco.giveCapacity(user, "Pradeep", 10000000);
           return await message.reply(`*10000000 🪙diamond storage has been added in ${message.pushName}\'s bank*`)
 
 
@@ -197,8 +196,8 @@ await message.reply('*What are you trying to do📉*.')
      //  let users = message.mentionedJid ? message.mentionedJid[0] : message.msg.contextInfo.participant || false;
        if (!match) return message.reply("Baka!! Provide the 💰amount you want to deposit!");
        let d = parseInt(match)
-       const deposit = await eco.deposit(message.sender, "Suhail", d);
-       const balance = await eco.balance(message.sender, "Suhail")
+       const deposit = await eco.deposit(message.sender, "Pradeep", d);
+       const balance = await eco.balance(message.sender, "Pradeep")
        if(deposit.noten) return message.reply('You can\'t deposit what you don\'t have💰.'); //if user states more than whats in his wallet
        return await message.reply(`⛩️ Sender: ${message.pushName}\n🍀Successfully 💰Deposited 🪙${deposit.amount} to your bank.Upgrade your bank capacity to add more money📈.`)
    //return await Aviator.bot.sendButtonText(message.chat,  `⛩️ Sender: ${message.pushName}\n🍀Successfully 💰Deposited 🪙${deposit.amount} to your bank.Upgrade your bank capacity to add more money📈.`, `${Config.ownername.split(' ')[0]}-Economy Version: 0.0.6`, message);
@@ -214,7 +213,7 @@ await message.reply('*What are you trying to do📉*.')
    },
    async(message) => {
      try{
-   let h = await eco.lb("Suhail",10);
+   let h = await eco.lb("Pradeep",10);
    let str = `*Top ${h.length} users with more money in wallet.*\n`
    const { sck1 } = require('../lib');
    let arr = []
@@ -250,13 +249,13 @@ async(message,match) => {
        const code = value[1];
        let d = parseInt(word)
        if (!d) return message.reply("check your text plz u r using the command in a wrong way👀");
-       const balance = await eco.balance(user1, "Suhail");
+       const balance = await eco.balance(user1, "Pradeep");
        let a = (balance.wallet) < parseInt(word)
        //Returns wallet, bank, and bankCapacity. Also creates a USer if it doesn't exist.
        if(a == true) return message.reply("you dont have sufficient money to transfer👎");
 
-       const deduct = await eco.deduct(user1, "Suhail", value[0]);
-       const give = await eco.give(user2, "Suhail", value[0]);
+       const deduct = await eco.deduct(user1, "Pradeep", value[0]);
+       const give = await eco.give(user2, "Pradeep", value[0]);
        return await message.reply(`*📠 Transaction successful of ${value[0]} 💰*`)
   // return await Aviator.bot.sendButtonText(message.chat, `*📠 Transaction successful of ${value[0]} 💰*`, `${Config.ownername.split(' ')[0]}-Economy Version: 0.0.6`, message);
 
@@ -277,7 +276,7 @@ async(message,match) => {
        let zerogroup = (await sck.findOne({ id: message.chat,})) || await sck.new({id: message.chat,})
        let mongoschemas = zerogroup.economy || "false";
        if (mongoschemas == "false") return message.reply("*🚦Economy* is not active in current group.");
-        const balance = await eco.balance(message.sender,"Suhail"); //Returns wallet, bank, and bankCapacity. Also creates a USer if it doesn't exist.
+        const balance = await eco.balance(message.sender,"Pradeep"); //Returns wallet, bank, and bankCapacity. Also creates a USer if it doesn't exist.
         return await message.reply(`*👛 ${message.pushName}'s Purse:*\n\n_🪙${balance.wallet}_`)
    //return await Aviator.bot.sendButtonText(message.chat, `*👛 ${message.pushName}'s Purse:*\n\n_🪙${balance.wallet}_`, `${Config.ownername.split(' ')[0]}-Economy Version: 0.0.6`, message);
        }catch(e){message.error(`${e}\n\ncommand: wallet`,e)}
@@ -297,7 +296,7 @@ async(message,match) => {
        if(!message.isCreator) return message.reply(`*_Hey buddy, only my owner can give money!_*`)
         let users = message.mentionedJid ? message.mentionedJid[0] : message.msg?.contextInfo?.participant || false;
         if(!users) return message.reply('Please give me user to add money.')
-        await eco.give(users, "Suhail", parseInt(match.split(' ')[0]));
+        await eco.give(users, "Pradeep", parseInt(match.split(' ')[0]));
        return await message.bot.sendMessage(message.chat,{text: `Added 📈 ${parseInt(match.split(' ')[0])} to @${users.split('@')[0]} wallet🛸.`,mentions:[users]},{quoted:message})
        }catch(e){message.error(`${e}\n\ncommand: give`,e)}
    }
@@ -316,7 +315,7 @@ async(message,match) => {
        let zerogroup = (await sck.findOne({  id: message.chat,  })) || (await sck.new({   id: message.chat,   }) );
        let mongoschemas = zerogroup.economy || "false";
        if (mongoschemas == "false") return message.reply("*🚦Economy* is not active in current group.");
-       const balance = await eco.balance(message.sender, "Suhail"); //Returns wallet, bank, and bankCapacity. Also creates a USer if it doesn't exist.
+       const balance = await eco.balance(message.sender, "Pradeep"); //Returns wallet, bank, and bankCapacity. Also creates a USer if it doesn't exist.
        return await message.reply(`🍀User: ${message.pushName}\n\n_🪙${balance.bank}/${balance.bankCapacity}_`)
    //return await Aviator.bot.sendButtonText(message.chat, `🍀User: ${message.pushName}\n\n_🪙${balance.bank}/${balance.bankCapacity}_`, `${Config.ownername.split(' ')[0]}-Economy \n Version: 0.0.6`, message);
        }catch(e){message.error(`${e}\n\ncommand: bank`,e)}
@@ -356,14 +355,14 @@ async(message,match) => {
              break
        case 'rob':
      const deduff = Math.floor(Math.random() * 1000)	    
-         await eco.deduct(user2, "Suhail", deduff);
-         await eco.give(message.sender, "Suhail", deduff);
+         await eco.deduct(user2, "Pradeep", deduff);
+         await eco.give(message.sender, "Pradeep", deduff);
          await message.reply(`*🤑 Robbery operation done successfully.🗡️*\nYou ran with ${deduff} amount in your wallet.`)
          ////message.react('💀')
              break
        case 'caught':
           const rmoney = Math.floor(Math.random() * 1000)
-          await eco.deduct(user1, "Suhail", rmoney);
+          await eco.deduct(user1, "Pradeep", rmoney);
           await message.reply(`*Sorry FBI👮 caught up with you, you paid ${rmoney} 🪙 from wallet🥹.*`)
           ////message.react('😦')
             break
@@ -392,9 +391,9 @@ await message.reply('*What are you trying to do👀*.')
        const user = message.sender
        if (!match) return message.reply("*Provide the amount💰 you want to withdraw💳!*");
        const query = match.trim();
-       const withdraw = await eco.withdraw(user, "Suhail", query);
+       const withdraw = await eco.withdraw(user, "Pradeep", query);
        if(withdraw.noten) return message.reply('*🏧 Insufficient fund in bank🫤*'); //if user states more than whats in his wallet
-       const add = eco.give(user,"Suhail", query);
+       const add = eco.give(user,"Pradeep", query);
        message.reply(`*🏧 ALERT* \n _🪙${withdraw.amount} has been withdrawn from your wallet💰._`)
        }catch(e){message.error(`${e}\n\ncommand: withdraw`,e)}
    }
@@ -509,27 +508,27 @@ console.log(balance.wallet)
 if(value<=balance.wallet){
    const deduff = Math.floor(Math.random() * value)
    if ((f1 !== f2) && f2 !== f3){
-       const deduct1 = await eco.deduct(user, "Suhail", deduff);
+       const deduct1 = await eco.deduct(user, "Pradeep", deduff);
        return message.reply(`${mess1}\n\n*Big Lose -->* _🪙${deduff}_`)
     }
     else if ((f1 == f2) && f2 == f3){
-       const give1 = await eco.give(user, "Suhail", deduff/2);
+       const give1 = await eco.give(user, "Pradeep", deduff/2);
        return message.reply(`${mess2}\n*_Little Jackpot -->* _🪙${deduff/2}_`)
     }
     else if ((f1 == f2) && f2 !== f3){
-       const give2 = await eco.give(user, "Suhail", deduff);
+       const give2 = await eco.give(user, "Pradeep", deduff);
        return message.reply(`${mess3}\n*Small Win -->* _🪙${deduff}_`)
     }
     else if ((f1 !== f2) && f1 == f3){
-       const deduct2 = await eco.deduct(user, "Suhail", deduff);
+       const deduct2 = await eco.deduct(user, "Pradeep", deduff);
        return message.reply(`${mess5}\n\n*Small Lose -->* _🪙${deduff}_`)
     }
     else if ((f1 !== f2) && f2 == f3){
-       const give4 = eco.give(user,"Suhail", deduff);
+       const give4 = eco.give(user,"Pradeep", deduff);
        return message.reply(`${mess3}\n\n*Small Win -->* _🪙${deduff}_`)
     }
     else if ((f1 == f2) && (f2 == f3) && (f3 == f4)){
-       const give5 = eco.give(user,"Suhail", deduff*20);
+       const give5 = eco.give(user,"Pradeep", deduff*20);
        return message.reply(`${mess4}\n\n_🎊 JackPot --> _🪙${deduff*20}_`)
     }
     else {
@@ -541,27 +540,27 @@ if(value<=balance.wallet){
 }
            }
            if ((f1 !== f2) && f2 !== f3){
-              const deduct1 = await eco.deduct(user, "Suhail", 50);
+              const deduct1 = await eco.deduct(user, "Pradeep", 50);
                      message.reply(`${mess1}\n\n*Big Lose -->* _🪙50_`)
            }
            else if ((f1 == f2) && f2 == f3){
-              const give1 = await eco.give(user,"Suhail", 100);
+              const give1 = await eco.give(user,"Pradeep", 100);
                     message.reply(`${mess2}\n*_Little Jackpot -->* _🪙100_`)
            }
            else if ((f1 == f2) && f2 !== f3){
-              const give2 = await eco.give(user, "Suhail", 20);
+              const give2 = await eco.give(user, "Pradeep", 20);
                     message.reply(`${mess3}\n*Small Win -->* _🪙20_`)
            }
            else if ((f1 !== f2) && f1 == f3){
-              const deduct2 = await eco.deduct(user, "Suhail", 20);
+              const deduct2 = await eco.deduct(user, "Pradeep", 20);
                     message.reply(`${mess5}\n\n*Small Lose -->* _🪙20_`)
            }
            else if ((f1 !== f2) && f2 == f3){
-              const give4 = eco.give(user, "Suhail", 20);
+              const give4 = eco.give(user, "Pradeep", 20);
                     message.reply(`${mess3}\n\n*Small Win -->* _🪙20_`)
            }
            else if ((f1 == f2) && (f2 == f3) && (f3 == f4)){
-              const give5 = eco.give(user, "Suhail", 1000);
+              const give5 = eco.give(user, "Pradeep", 1000);
                    message.reply(`${mess4}\n\n_🎊 JackPot --> _🪙1000_`)
            }
            else {  message.reply(`Do you understand what you are doing?`)        }
@@ -634,7 +633,7 @@ async(message) => {
    if(t[0]===ttt[1] && t[0]===ttt[2]) lol = true
    if(lol){
        const deduff = Math.floor(Math.random() * 5000)
-       const give2 = await eco.give(message.sender, "Suhail", deduff*2);
+       const give2 = await eco.give(message.sender, "Pradeep", deduff*2);
        let st = `🎰 Slot Machine Result\n     ${i}\n\n     ${j}\n\n     ${k}\n\nWow Jackpot🎊.`
        let str = st.replace(/1/g, `🔴`).replace(/2/g, `🔵`).replace(/3/g, `🟣`).replace(/4/g, `🟢`).replace(/5/g, `🟡`).replace(/6/g, `⚪️`).replace(/7/g, `⚫️`).replace(/:/g, `  `)
 
@@ -643,7 +642,7 @@ async(message) => {
 
    } else {
    const deduff = Math.floor(Math.random() * 300)
-   const deduct1 = await eco.deduct(message.sender, "Suhail", deduff);
+   const deduct1 = await eco.deduct(message.sender, "Pradeep", deduff);
    let st = `\n🎰 Slot Machine Result\n     ${i}\n\n      ${j}\n\n      ${k}\n\nNot Jacpot📉 but lost `
            let str = st.replace(/1/g, `🔴`).replace(/2/g, `🔵`).replace(/3/g, `🟣`).replace(/4/g, `🟢`).replace(/5/g, `🟡`).replace(/6/g, `⚪️`).replace(/7/g, `⚫️`).replace(/:/g, `    `)
            return await message.reply(str+` ${deduff}.`)
